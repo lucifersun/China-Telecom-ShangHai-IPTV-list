@@ -1,0 +1,804 @@
+﻿HTTP/1.1 200 OK
+Date: Thu, 18 Aug 2016 11:45:52 GMT
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+Set-Cookie: JSESSIONID=c7gsX1fQgFZsD2ZxxxhQgzJx4RG0qdsxxxZPXh3M12f5wn3DmghT!496789554; path=/; HttpOnly
+X-Powered-By: Servlet/2.5 JSP/2.1
+
+
+
+
+
+
+
+
+
+ 
+ 
+
+
+
+<html>
+	<head>
+		<title>获得认证身份</title>
+		<meta name="page-view-size" content="1280*720">
+		<script language="javascript" src='/iptv3a/scripts/audioplay.js'></script>
+		<script language="javascript">
+		//音频广告启用标识
+		var audioADOn = "no";
+var channels=new Array();
+var serviceEntrys= new Array();
+		
+		channels[0]='ChannelID="0000000200000005000000006473",ChannelName="浙江卫视HD杜比",UserChannelID="140",ChannelURL="igmp://239.45.3.191:5140",TimeShift="0",ChannelSDP="null",TimeShiftURL="null",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1"';
+		
+		channels[1]='ChannelID="00000002000000050000000001639071",ChannelName="家有购物",UserChannelID="70",ChannelURL="igmp://239.45.3.234:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226287/10000100000000060000000001639077_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226287/10000100000000060000000001639077_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1"';
+		
+		channels[2]='ChannelID="00000002000000050000000000411443",ChannelName="江西卫视-2.5M",UserChannelID="215",ChannelURL="igmp://239.45.1.227:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226130/00000100000000060000000000087162_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226130/00000100000000060000000000087162_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.89"';
+		
+		channels[3]='ChannelID="00000004000000050000000000000136",ChannelName="统一组播测试CCTV-1",UserChannelID="500",ChannelURL="igmp://239.45.3.25:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/0/3221225558/00000000015n.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/0/3221225558/00000000015n.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.90"';
+		
+		channels[4]='ChannelID="00000001000000050000000001475772",ChannelName="优购物",UserChannelID="67",ChannelURL="igmp://239.45.3.186:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226245/10000100000000060000000000965372_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226245/10000100000000060000000000965372_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1"';
+		
+		channels[5]='ChannelID="00000000000000010020110624000004",ChannelName="乐龄",UserChannelID="960",ChannelURL="http://222.68.195.15/IPTVReling/index.asp",TimeShift="0",ChannelSDP="null",TimeShiftURL="null",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="2",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.90"';
+		
+		channels[6]='ChannelID="00000002000000050000000000411431",ChannelName="湖南卫视-2.5M",UserChannelID="203",ChannelURL="igmp://239.45.1.215:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226154/00000100000000060000000000087186_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226154/00000100000000060000000000087186_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.89"';
+		
+		channels[7]='ChannelID="00000001000000050000000001367710",ChannelName="欢笑剧���HD",UserChannelID="100",ChannelURL="igmp://239.45.3.196:5140",TimeShift="0",ChannelSDP="null",TimeShiftURL="null",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1"';
+		
+		channels[8]='ChannelID="00000002000000050000000001456858",ChannelName="4K直播测试",UserChannelID="656",ChannelURL="igmp://239.45.3.183:5140",TimeShift="0",ChannelSDP="null",TimeShiftURL="null",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1"';
+		
+		channels[9]='ChannelID="00000001000000050000000000001602",ChannelName="中国达人秀",UserChannelID="424",ChannelURL="igmp://239.45.3.2:5140",TimeShift="0",ChannelSDP="null",TimeShiftURL="null",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.90"';
+		
+		channels[10]='ChannelID="00000001000000050000000001555897",ChannelName="风云足球",UserChannelID="297",ChannelURL="igmp://239.45.3.203:5140",TimeShift="0",ChannelSDP="null",TimeShiftURL="null",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1"';
+		
+		channels[11]='ChannelID="00000000000000010020111019000001",ChannelName="e财经频道",UserChannelID="985",ChannelURL="http://222.68.210.15:8088/vas/ycj/index.jsp",TimeShift="0",ChannelSDP="null",TimeShiftURL="null",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="2",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.90"';
+		
+		channels[12]='ChannelID="00000002000000050000000000831568",ChannelName="闵行电视台",UserChannelID="48",ChannelURL="igmp://239.45.3.218:5140",TimeShift="0",ChannelSDP="null",TimeShiftURL="null",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1"';
+		
+		channels[13]='ChannelID="00000002000000050000000000339632",ChannelName="教育频道-2.5M",UserChannelID="16",ChannelURL="igmp://239.45.3.252:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226088/00000100000000060000000000007667_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226088/00000100000000060000000000007667_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.89"';
+		
+		channels[14]='ChannelID="00000002000000050000000000411442",ChannelName="天津卫视-2.5M",UserChannelID="214",ChannelURL="igmp://239.45.1.226:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226123/00000100000000060000000000087161_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226123/00000100000000060000000000087161_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.89"';
+		
+		channels[15]='ChannelID="00000002000000050000000000411451",ChannelName="甘肃卫视-2.5M",UserChannelID="222",ChannelURL="igmp://239.45.1.234:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226131/00000100000000060000000000087169_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226131/00000100000000060000000000087169_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.89"';
+		
+		channels[16]='ChannelID="00000002000000050000000000339609",ChannelName="纪实频道-2.5M",UserChannelID="9",ChannelURL="igmp://239.45.3.247:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226095/00000100000000060000000000007694_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226095/00000100000000060000000000007694_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.90"';
+		
+		channels[17]='ChannelID="00000001000000050000000000002696",ChannelName="女人",UserChannelID="438",ChannelURL="igmp://239.45.3.80:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/0/3221225560/00000000015t.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/0/3221225560/00000000015t.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.90"';
+		
+		channels[18]='ChannelID="00000009000000050000000002014416",ChannelName="健康频道",UserChannelID="611",ChannelURL="http://222.68.210.15:8088/wanba/health.jsp",TimeShift="0",ChannelSDP="null",TimeShiftURL="null",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="2",ChannelPurchased="1"';
+		
+		channels[19]='ChannelID="00000001000000050000000000001608",ChannelName="古装剧场",UserChannelID="415",ChannelURL="igmp://239.45.3.92:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/0/3221225535/00000000014k.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/0/3221225535/00000000014k.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.90"';
+		
+		channels[20]='ChannelID="00000001000000050000000001995522",ChannelName="东方购物-1HD",UserChannelID="112",ChannelURL="igmp://239.45.3.74:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226275/10000100000000060000000001534016_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226275/10000100000000060000000001534016_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1"';
+		
+		channels[21]='ChannelID="00000001000000050000000000079468",ChannelName="深圳卫视",UserChannelID="231",ChannelURL="igmp://239.45.3.141:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226204/00000100000000060000000000152298_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226204/00000100000000060000000000152298_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.89"';
+		
+		channels[22]='ChannelID="00000002000000050000000000339624",ChannelName="哈哈少儿-2.5M",UserChannelID="10",ChannelURL="igmp://239.45.3.248:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226096/00000100000000060000000000007695_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226096/00000100000000060000000000007695_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.89"';
+		
+		channels[23]='ChannelID="00000001000000050000000001800368",ChannelName="好享购物",UserChannelID="68",ChannelURL="igmp://239.45.1.253:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226260/10000100000000060000000001335174_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226260/10000100000000060000000001335174_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1"';
+		
+		channels[24]='ChannelID="00000002000000050000000000411417",ChannelName="欢笑剧场-2.5M",UserChannelID="303",ChannelURL="igmp://239.45.1.203:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226146/00000100000000060000000000087178_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226146/00000100000000060000000000087178_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.89"';
+		
+		channels[25]='ChannelID="00000001000000050000000000002699",ChannelName="股评汇",UserChannelID="412",ChannelURL="igmp://239.45.3.84:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/0/3221225529/00000000014e.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/0/3221225529/00000000014e.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.90"';
+		
+		channels[26]='ChannelID="00000001000000050000000000123232",ChannelName="直播室11-2.5M",UserChannelID="987",ChannelURL="igmp://239.45.1.246:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226181/00000100000000060000000000087274_2.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226181/00000100000000060000000000087274_2.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.90"';
+		
+		channels[27]='ChannelID="00000002000000050000000000339570",ChannelName="东方卫视-2.5M",UserChannelID="2",ChannelURL="igmp://239.45.3.242:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226090/00000100000000060000000000007689_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226090/00000100000000060000000000007689_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.89"';
+		
+		channels[28]='ChannelID="00000009000000050000000000084120",ChannelName="开机专区",UserChannelID="999",ChannelURL="http://222.68.210.46:9090/fangchan/pages/fangChan2/newindex.jsp",TimeShift="0",ChannelSDP="null",TimeShiftURL="null",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="2",ChannelPurchased="1"';
+		
+		channels[29]='ChannelID="00000001000000050000000002197671",ChannelName="直播室108",UserChannelID="189",ChannelURL="igmp://239.45.3.53:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226299/10000100000000060000000001678742_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226299/10000100000000060000000001678742_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1"';
+		
+		channels[30]='ChannelID="00000002000000050000000000339629",ChannelName="外语频道-2.5M",UserChannelID="11",ChannelURL="igmp://239.45.3.249:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226097/00000100000000060000000000007696_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226097/00000100000000060000000000007696_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.89"';
+		
+		channels[31]='ChannelID="00000002000000050000000000411440",ChannelName="东南卫视-2.5M",UserChannelID="212",ChannelURL="igmp://239.45.1.224:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226121/00000100000000060000000000087159_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226121/00000100000000060000000000087159_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.89"';
+		
+		channels[32]='ChannelID="00000001000000050000000000079467",ChannelName="金鹰卡通-2.5M",UserChannelID="235",ChannelURL="igmp://239.45.3.119:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226229/10000100000000060000000000734085_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226229/10000100000000060000000000734085_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1"';
+		
+		channels[33]='ChannelID="00000001000000050000000000990914",ChannelName="娱乐频道HD",UserChannelID="104",ChannelURL="igmp://239.45.3.236:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226219/10000100000000060000000000522063_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226219/10000100000000060000000000522063_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.89"';
+		
+		channels[34]='ChannelID="00000001000000050000000000002712",ChannelName="测试频道1",UserChannelID="901",ChannelURL="igmp://239.45.3.98:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/0/3221225539/00000000014s.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/0/3221225539/00000000014s.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.90"';
+		
+		channels[35]='ChannelID="00000002000000050000000000413840",ChannelName="直播室10-2.5M",UserChannelID="440",ChannelURL="igmp://239.45.1.245:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226188/00000100000000060000000000087273_2.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226188/00000100000000060000000000087273_2.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.90"';
+		
+		channels[36]='ChannelID="00000002000000050000000000411459",ChannelName="河南卫视-2.5M",UserChannelID="230",ChannelURL="igmp://239.45.1.242:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226124/00000100000000060000000000087104_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226124/00000100000000060000000000087104_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.89"';
+		
+		channels[37]='ChannelID="00000001000000050000000000001353",ChannelName="CCTV-8",UserChannelID="58",ChannelURL="igmp://239.45.3.32:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/0/3221225503/00000000011i.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/0/3221225503/00000000011i.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.90"';
+		
+		channels[38]='ChannelID="00000001000000050000000000002704",ChannelName="网球",UserChannelID="402",ChannelURL="igmp://239.45.3.181:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/0/3221225697/iptv207702.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/0/3221225697/iptv207702.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.90"';
+		
+		channels[39]='ChannelID="00000001000000050000000000181359",ChannelName="广东卫视HD",UserChannelID="145",ChannelURL="igmp://239.45.3.230:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226083/00000100000000060000000000005868_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226083/00000100000000060000000000005868_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.89"';
+		
+		channels[40]='ChannelID="00000002000000050000000000413836",ChannelName="CCTV-高网-2.5M",UserChannelID="325",ChannelURL="igmp://239.45.1.243:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226179/00000100000000060000000000087271_2.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226179/00000100000000060000000000087271_2.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.90"';
+		
+		channels[41]='ChannelID="00000001000000050000000000002691",ChannelName="热门综艺",UserChannelID="423",ChannelURL="igmp://239.45.3.1:5140",TimeShift="0",ChannelSDP="null",TimeShiftURL="null",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.90"';
+		
+		channels[42]='ChannelID="00000001000000050000000000123227",ChannelName="NBA直播室6HD",UserChannelID="186",ChannelURL="igmp://239.45.3.215:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226232/10000100000000060000000000686925_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226232/10000100000000060000000000686925_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1"';
+		
+		channels[43]='ChannelID="00000001000000050000000001555894",ChannelName="游戏风云HD",UserChannelID="93",ChannelURL="igmp://239.45.3.131:5140",TimeShift="0",ChannelSDP="null",TimeShiftURL="null",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1"';
+		
+		channels[44]='ChannelID="00000000000000010020160805000001",ChannelName="快乐购物",UserChannelID="49",ChannelURL="igmp://239.45.3.116:5140",TimeShift="0",ChannelSDP="null",TimeShiftURL="null",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1"';
+		
+		channels[45]='ChannelID="00000001000000050000000001394465",ChannelName="东方购物4",UserChannelID="22",ChannelURL="igmp://239.45.3.125:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226239/10000100000000060000000000848070_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226239/10000100000000060000000000848070_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.90"';
+		
+		channels[46]='ChannelID="00000001000000050000000000126387",ChannelName="新疆卫视",UserChannelID="232",ChannelURL="igmp://239.45.3.142:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226187/00000100000000060000000000152294_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226187/00000100000000060000000000152294_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.89"';
+		
+		channels[47]='ChannelID="00000001000000050000000001346062",ChannelName="第一财经HD",UserChannelID="109",ChannelURL="igmp://239.45.3.211:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226231/10000100000000060000000000813433_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226231/10000100000000060000000000813433_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.89"';
+		
+		channels[48]='ChannelID="00000002000000050000000000339630",ChannelName="东方购物-1-2.5M",UserChannelID="12",ChannelURL="igmp://239.45.3.250:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226098/00000100000000060000000000007697_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226098/00000100000000060000000000007697_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.89"';
+		
+		channels[49]='ChannelID="00000001000000050000000000123225",ChannelName="直播室4",UserChannelID="184",ChannelURL="igmp://239.45.3.139:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226193/00000100000000060000000000201563_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226193/00000100000000060000000000201563_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.89"';
+		
+		channels[50]='ChannelID="00000009000000050000000000084133",ChannelName="出行",UserChannelID="589",ChannelURL="http://222.68.210.4/etourlives/index.html",TimeShift="0",ChannelSDP="null",TimeShiftURL="null",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="2",ChannelPurchased="1"';
+		
+		channels[51]='ChannelID="00000002000000050000000000339567",ChannelName="新���综合-2.5M",UserChannelID="1",ChannelURL="igmp://239.45.3.241:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226089/00000100000000060000000000007688_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226089/00000100000000060000000000007688_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.89"';
+		
+		channels[52]='ChannelID="00000001000000050000000000123222",ChannelName="直播室1",UserChannelID="181",ChannelURL="igmp://239.45.3.157:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/0/3221225669/0000000022ij.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/0/3221225669/0000000022ij.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.89"';
+		
+		channels[53]='ChannelID="00000001000000050000000001555903",ChannelName="世界地理",UserChannelID="295",ChannelURL="igmp://239.45.3.201:5140",TimeShift="0",ChannelSDP="null",TimeShiftURL="null",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1"';
+		
+		channels[54]='ChannelID="00000001000000050000000000111129",ChannelName="江苏卫视(高清)",UserChannelID="142",ChannelURL="igmp://239.45.3.177:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226110/00000100000000060000000000037546_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226110/00000100000000060000000000037546_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.89"';
+		
+		channels[55]='ChannelID="00000001000000050000000000123235",ChannelName="直播室14-2.5M",UserChannelID="602",ChannelURL="igmp://239.45.1.249:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226192/00000100000000060000000000087276_2.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226192/00000100000000060000000000087276_2.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.90"';
+		
+		channels[56]='ChannelID="00000002000000050000000000411399",ChannelName="CCTV-NEWS-2.5M",UserChannelID="59",ChannelURL="igmp://239.45.1.194:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226164/00000100000000060000000000087196_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226164/00000100000000060000000000087196_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.90"';
+		
+		channels[57]='ChannelID="00000002000000050000000000411400",ChannelName="CCTV-10-2.5M",UserChannelID="60",ChannelURL="igmp://239.45.1.195:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226157/00000100000000060000000000087197_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226157/00000100000000060000000000087197_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.90"';
+		
+		channels[58]='ChannelID="00000009000000050000000000084134",ChannelName="优惠促销",UserChannelID="980",ChannelURL="http://222.68.195.32:8080/yhq/",TimeShift="0",ChannelSDP="null",TimeShiftURL="null",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="2",ChannelPurchased="1"';
+		
+		channels[59]='ChannelID="00000001000000050000000000002688",ChannelName="阿拉一家门",UserChannelID="425",ChannelURL="igmp://239.45.3.71:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/0/3221225477/00000000010s.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/0/3221225477/00000000010s.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.90"';
+		
+		channels[60]='ChannelID="00000000000000010020160526000010",ChannelName="芒果直播频道10",UserChannelID="710",ChannelURL="igmp://239.45.3.99:5140",TimeShift="0",ChannelSDP="null",TimeShiftURL="null",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1"';
+		
+		channels[61]='ChannelID="00000002000000050000000000411433",ChannelName="浙江卫视-2.5M",UserChannelID="205",ChannelURL="igmp://239.45.1.217:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226156/00000100000000060000000000087188_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226156/00000100000000060000000000087188_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.89"';
+		
+		channels[62]='ChannelID="00000009000000050000000000084131",ChannelName="我爱上海",UserChannelID="502",ChannelURL="http://222.68.210.46:9090/force/pages/brand/tour/index.jsp?fromStatus=channel",TimeShift="0",ChannelSDP="null",TimeShiftURL="null",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="2",ChannelPurchased="1"';
+		
+		channels[63]='ChannelID="00000001000000050000000000001383",ChannelName="东方财经",UserChannelID="319",ChannelURL="igmp://239.45.3.192:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226197/00000100000000060000000000205536_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226197/00000100000000060000000000205536_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.90"';
+		
+		channels[64]='ChannelID="00000002000000050000000000281269",ChannelName="投资理财",UserChannelID="728",ChannelURL="igmp://239.45.3.219:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/0/3221225765/iptv255201.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/0/3221225765/iptv255201.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.90"';
+		
+		channels[65]='ChannelID="00000001000000050000000000123237",ChannelName="直播室16-2.5M",UserChannelID="992",ChannelURL="igmp://239.45.1.251:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226183/00000100000000060000000000087278_2.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226183/00000100000000060000000000087278_2.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.90"';
+		
+		channels[66]='ChannelID="00000002000000050000000000411402",ChannelName="CCTV-12-2.5M",UserChannelID="62",ChannelURL="igmp://239.45.1.197:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226159/00000100000000060000000000087199_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226159/00000100000000060000000000087199_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.90"';
+		
+		channels[67]='ChannelID="00000001000000050000000000057244",ChannelName="高清3",UserChannelID="283",ChannelURL="igmp://239.45.3.3:5140",TimeShift="0",ChannelSDP="null",TimeShiftURL="null",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.89"';
+		
+		channels[68]='ChannelID="00000001000000050000000000002698",ChannelName="赛事精选-2",UserChannelID="403",ChannelURL="igmp://239.45.3.82:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/0/3221225527/00000000014c.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/0/3221225527/00000000014c.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.90"';
+		
+		channels[69]='ChannelID="00000002000000050000000000084120",ChannelName="快乐学堂",UserChannelID="555",ChannelURL="http://222.68.210.16:8190/iptvshdx53/welcome/home.htm",TimeShift="0",ChannelSDP="null",TimeShiftURL="null",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="2",ChannelPurchased="1"';
+		
+		channels[70]='ChannelID="00000001000000050000000001555893",ChannelName="生活时尚HD",UserChannelID="94",ChannelURL="igmp://239.45.3.132:5140",TimeShift="0",ChannelSDP="null",TimeShiftURL="null",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1"';
+		
+		channels[71]='ChannelID="00000002000000050000000000339631",ChannelName="东方电影-2.5M",UserChannelID="15",ChannelURL="igmp://239.45.3.251:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226100/00000100000000060000000000007698_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226100/00000100000000060000000000007698_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.89"';
+		
+		channels[72]='ChannelID="00000002000000050000000000413845",ChannelName="直播室13-2.5M",UserChannelID="443",ChannelURL="igmp://239.45.1.248:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226198/00000100000000060000000000088056_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226198/00000100000000060000000000088056_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.90"';
+		
+		channels[73]='ChannelID="00000001000000050000000000111128",ChannelName="CCTV-1高清",UserChannelID="121",ChannelURL="igmp://239.45.3.145:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226102/00000100000000060000000000009784_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226102/00000100000000060000000000009784_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.89"';
+		
+		channels[74]='ChannelID="00000001000000050000000001555905",ChannelName="央视精品",UserChannelID="293",ChannelURL="igmp://239.45.3.199:5140",TimeShift="0",ChannelSDP="null",TimeShiftURL="null",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1"';
+		
+		channels[75]='ChannelID="00000000000000010020160526000007",ChannelName="芒果直播频道7",UserChannelID="707",ChannelURL="igmp://239.45.3.129:5140",TimeShift="0",ChannelSDP="null",TimeShiftURL="null",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1"';
+		
+		channels[76]='ChannelID="00000001000000050000000000001221",ChannelName="央广健康",UserChannelID="36",ChannelURL="igmp://239.45.1.210:5140",TimeShift="0",ChannelSDP="null",TimeShiftURL="null",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1"';
+		
+		channels[77]='ChannelID="00000002000000050000000000411449",ChannelName="陕西卫视-2.5M",UserChannelID="220",ChannelURL="igmp://239.45.1.232:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226129/00000100000000060000000000087167_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226129/00000100000000060000000000087167_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.89"';
+		
+		channels[78]='ChannelID="00000002000000050000000000486389",ChannelName="3D试验",UserChannelID="124",ChannelURL="igmp://239.45.3.184:5140",TimeShift="0",ChannelSDP="null",TimeShiftURL="null",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.89"';
+		
+		channels[79]='ChannelID="00000001000000050000000000002708",ChannelName="香江影院",UserChannelID="410",ChannelURL="igmp://239.45.3.94:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/0/3221225575/00000000016h.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/0/3221225575/00000000016h.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.90"';
+		
+		channels[80]='ChannelID="00000001000000050000000001555896",ChannelName="第一剧场",UserChannelID="298",ChannelURL="igmp://239.45.3.204:5140",TimeShift="0",ChannelSDP="null",TimeShiftURL="null",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1"';
+		
+		channels[81]='ChannelID="00000002000000050000000000411447",ChannelName="青海卫视-2.5M",UserChannelID="218",ChannelURL="igmp://239.45.1.230:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226127/00000100000000060000000000087165_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226127/00000100000000060000000000087165_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.89"';
+		
+		channels[82]='ChannelID="00000001000000050000000001555881",ChannelName="都市剧场HD",UserChannelID="98",ChannelURL="igmp://239.45.3.136:5140",TimeShift="0",ChannelSDP="null",TimeShiftURL="null",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1"';
+		
+		channels[83]='ChannelID="00000002000000050000000000411448",ChannelName="西藏卫视-2.5M",UserChannelID="219",ChannelURL="igmp://239.45.1.231:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226134/00000100000000060000000000087166_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226134/00000100000000060000000000087166_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.89"';
+		
+		channels[84]='ChannelID="00000002000000050000000000331685",ChannelName="CCTV-2",UserChannelID="52",ChannelURL="igmp://239.45.3.189:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226078/00000100000000060000000000000321_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226078/00000100000000060000000000000321_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.90"';
+		
+		channels[85]='ChannelID="00000001000000050000000001555907",ChannelName="老故事",UserChannelID="291",ChannelURL="igmp://239.45.3.197:5140",TimeShift="0",ChannelSDP="null",TimeShiftURL="null",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1"';
+		
+		channels[86]='ChannelID="00000002000000050000000000411418",ChannelName="生活时尚-2.5M",UserChannelID="314",ChannelURL="igmp://239.45.1.204:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226139/00000100000000060000000000087179_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226139/00000100000000060000000000087179_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.90"';
+		
+		channels[87]='ChannelID="00000004000000050000000000000187",ChannelName="全国党员教育",UserChannelID="930",ChannelURL="igmp://239.45.3.9:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/0/3221225639/000000001jc7.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/0/3221225639/000000001jc7.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.90"';
+		
+		channels[88]='ChannelID="00000002000000050000000001673353",ChannelName="直播室210",UserChannelID="449",ChannelURL="igmp://239.45.1.208:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226301/10000100000000060000000001678747_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226301/10000100000000060000000001678747_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1"';
+		
+		channels[89]='ChannelID="00000001000000050000000000051708",ChannelName="高清2",UserChannelID="282",ChannelURL="igmp://239.45.3.2:5140",TimeShift="0",ChannelSDP="null",TimeShiftURL="null",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.89"';
+		
+		channels[90]='ChannelID="00000001000000050000000000001604",ChannelName="高尔夫",UserChannelID="405",ChannelURL="igmp://239.45.3.78:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/0/3221225522/000000000146.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/0/3221225522/000000000146.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.90"';
+		
+		channels[91]='ChannelID="00000001000000050000000000001359",ChannelName="CCTV-少儿-2.5M",UserChannelID="938",ChannelURL="igmp://239.45.1.199:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226161/00000100000000060000000000087201_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226161/00000100000000060000000000087201_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.90"';
+		
+		channels[92]='ChannelID="00000001000000050000000000001374",ChannelName="七彩戏剧",UserChannelID="17",ChannelURL="igmp://239.45.3.61:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/0/3221225536/00000000014l.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/0/3221225536/00000000014l.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.89"';
+		
+		channels[93]='ChannelID="00000002000000050000000000348912",ChannelName="体育频道",UserChannelID="8",ChannelURL="igmp://239.45.3.112:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226107/00000100000000060000000000022372_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226107/00000100000000060000000000022372_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.90"';
+		
+		channels[94]='ChannelID="00000001000000050000000000002700",ChannelName="竞G场",UserChannelID="407",ChannelURL="igmp://239.45.3.85:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/0/3221225528/00000000014d.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/0/3221225528/00000000014d.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.90"';
+		
+		channels[95]='ChannelID="00000009000000050000000000084132",ChannelName="健康科普",UserChannelID="990",ChannelURL="http://222.68.210.46:9090/force/pages/brand/healthIndex.jsp",TimeShift="0",ChannelSDP="null",TimeShiftURL="null",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="2",ChannelPurchased="1"';
+		
+		channels[96]='ChannelID="00000000000000010020160526000001",ChannelName="芒果直播频道1",UserChannelID="701",ChannelURL="igmp://239.45.3.5:5140",TimeShift="0",ChannelSDP="null",TimeShiftURL="null",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1"';
+		
+		channels[97]='ChannelID="00000001000000050000000000123233",ChannelName="直播室12-2.5M",UserChannelID="993",ChannelURL="igmp://239.45.1.247:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226196/00000100000000060000000000087275_3.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226196/00000100000000060000000000087275_3.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.90"';
+		
+		channels[98]='ChannelID="00000001000000050000000000123230",ChannelName="直播室9-2.5M",UserChannelID="984",ChannelURL="igmp://239.45.1.244:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226185/00000100000000060000000000087272_1.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226185/00000100000000060000000000087272_1.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.90"';
+		
+		channels[99]='ChannelID="00000002000000050000000000411405",ChannelName="CCTV-少儿-2.5M",UserChannelID="64",ChannelURL="igmp://239.45.1.199:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226161/00000100000000060000000000087201_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226161/00000100000000060000000000087201_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.90"';
+		
+		channels[100]='ChannelID="00000001000000050000000000002714",ChannelName="怀旧金曲",UserChannelID="427",ChannelURL="igmp://239.45.3.101:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/0/3221225563/00000000015x.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/0/3221225563/00000000015x.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.90"';
+		
+		channels[101]='ChannelID="00000002000000050000000000339573",ChannelName="娱乐频道-2.5M",UserChannelID="3",ChannelURL="igmp://239.45.3.243:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226091/00000100000000060000000000007690_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226091/00000100000000060000000000007690_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.89"';
+		
+		channels[102]='ChannelID="00000001000000050000000001004303",ChannelName="高清导视频道",UserChannelID="198",ChannelURL="igmp://239.45.3.240:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226215/10000100000000060000000000516617_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226215/10000100000000060000000000516617_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.89"';
+		
+		channels[103]='ChannelID="00000002000000050000000000331689",ChannelName="研究院测试频道",UserChannelID="963",ChannelURL="igmp://239.45.3.191:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226080/00000100000000060000000000000339_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226080/00000100000000060000000000000339_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.90"';
+		
+		channels[104]='ChannelID="00000001000000050000000001555904",ChannelName="风云剧场",UserChannelID="294",ChannelURL="igmp://239.45.3.200:5140",TimeShift="0",ChannelSDP="null",TimeShiftURL="null",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1"';
+		
+		channels[105]='ChannelID="00000002000000050000000001039895",ChannelName="嘉定电视台",UserChannelID="47",ChannelURL="igmp://239.45.3.185:5140",TimeShift="0",ChannelSDP="null",TimeShiftURL="null",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1"';
+		
+		channels[106]='ChannelID="00000001000000050000000000002702",ChannelName="超级玩家",UserChannelID="408",ChannelURL="igmp://239.45.3.87:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/0/3221225578/00000000016k.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/0/3221225578/00000000016k.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.90"';
+		
+		channels[107]='ChannelID="00000001000000050000000001995523",ChannelName="东方购物-2HD",UserChannelID="113",ChannelURL="igmp://239.45.3.75:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226264/10000100000000060000000001534015_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226264/10000100000000060000000001534015_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1"';
+		
+		channels[108]='ChannelID="00000001000000050000000000063734",ChannelName="中国气象",UserChannelID="971",ChannelURL="igmp://239.45.3.10:5140",TimeShift="0",ChannelSDP="null",TimeShiftURL="null",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.90"';
+		
+		channels[109]='ChannelID="00000001000000050000000001134129",ChannelName="纪实频道HD",UserChannelID="106",ChannelURL="igmp://239.45.3.212:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226230/10000100000000060000000000646848_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226230/10000100000000060000000000646848_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.89"';
+		
+		channels[110]='ChannelID="00000009000000050000000002014417",ChannelName="智慧社区",UserChannelID="600",ChannelURL="http://222.68.210.15:8088/vas/certus.jsp",TimeShift="0",ChannelSDP="null",TimeShiftURL="null",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="2",ChannelPurchased="1"';
+		
+		channels[111]='ChannelID="00000002000000050000000000339586",ChannelName="电视剧频道-2.5M",UserChannelID="5",ChannelURL="igmp://239.45.3.245:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226093/00000100000000060000000000007692_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226093/00000100000000060000000000007692_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.90"';
+		
+		channels[112]='ChannelID="00000001000000050000000000001606",ChannelName="美食",UserChannelID="434",ChannelURL="igmp://239.45.3.108:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/0/3221225543/000000000151.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/0/3221225543/000000000151.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.90"';
+		
+		channels[113]='ChannelID="00000001000000050000000000051709",ChannelName="EXPO测试频道",UserChannelID="280",ChannelURL="igmp://239.45.3.130:5140",TimeShift="0",ChannelSDP="null",TimeShiftURL="null",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.89"';
+		
+		channels[114]='ChannelID="00000001000000050000000001368437",ChannelName="全纪实HD",UserChannelID="97",ChannelURL="igmp://239.45.3.135:5140",TimeShift="0",ChannelSDP="null",TimeShiftURL="null",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1"';
+		
+		channels[115]='ChannelID="00000001000000050000000000181361",ChannelName="北京卫视HD",UserChannelID="144",ChannelURL="igmp://239.45.3.229:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226087/00000100000000060000000000007666_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226087/00000100000000060000000000007666_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.89"';
+		
+		channels[116]='ChannelID="00000001000000050000000001394467",ChannelName="东方购物5",UserChannelID="23",ChannelURL="igmp://239.45.3.126:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226243/10000100000000060000000000848375_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226243/10000100000000060000000000848375_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.90"';
+		
+		channels[117]='ChannelID="00000002000000050000000000411436",ChannelName="四川卫视-2.5M",UserChannelID="208",ChannelURL="igmp://239.45.1.220:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226151/00000100000000060000000000087191_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226151/00000100000000060000000000087191_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.89"';
+		
+		channels[118]='ChannelID="00000001000000050000000000002711",ChannelName="经典动画",UserChannelID="420",ChannelURL="igmp://239.45.3.97:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/0/3221225574/00000000016g.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/0/3221225574/00000000016g.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.90"';
+		
+		channels[119]='ChannelID="00000001000000050000000000002689",ChannelName="热门剧场",UserChannelID="411",ChannelURL="igmp://239.45.3.72:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/0/3221225481/00000000010w.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/0/3221225481/00000000010w.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.90"';
+		
+		channels[120]='ChannelID="00000001000000050000000001555886",ChannelName="动漫秀场HD",UserChannelID="96",ChannelURL="igmp://239.45.3.134:5140",TimeShift="0",ChannelSDP="null",TimeShiftURL="null",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1"';
+		
+		channels[121]='ChannelID="00000000000000010000000002015509",ChannelName="第一电影",UserChannelID="601",ChannelURL="http://222.68.210.15:8088/vas/movie.jsp",TimeShift="0",ChannelSDP="null",TimeShiftURL="null",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="2",ChannelPurchased="1"';
+		
+		channels[122]='ChannelID="00000002000000050000000000411458",ChannelName="贵州卫视-2.5M",UserChannelID="229",ChannelURL="igmp://239.45.1.241:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226144/00000100000000060000000000087176_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226144/00000100000000060000000000087176_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.89"';
+		
+		channels[123]='ChannelID="00000001000000050000000001555902",ChannelName="风云音乐",UserChannelID="296",ChannelURL="igmp://239.45.3.202:5140",TimeShift="0",ChannelSDP="null",TimeShiftURL="null",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1"';
+		
+		channels[124]='ChannelID="00000001000000050000000000001378",ChannelName="极速汽车",UserChannelID="318",ChannelURL="igmp://239.45.3.4:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/0/3221225640/000000001suk.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/0/3221225640/000000001suk.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.90"';
+		
+		channels[125]='ChannelID="00000002000000050000000000084119",ChannelName="购物商城",UserChannelID="888",ChannelURL="http://222.68.209.9:8085/iptv/jsp/index888.jsp",TimeShift="0",ChannelSDP="null",TimeShiftURL="null",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="2",ChannelPurchased="1"';
+		
+		channels[126]='ChannelID="00000002000000050000000000411452",ChannelName="广东卫视-2.5M",UserChannelID="223",ChannelURL="igmp://239.45.1.235:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226138/00000100000000060000000000087170_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226138/00000100000000060000000000087170_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.89"';
+		
+		channels[127]='ChannelID="00000002000000050000000000411401",ChannelName="CCTV-11-2.5M",UserChannelID="61",ChannelURL="igmp://239.45.1.196:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226166/00000100000000060000000000087198_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226166/00000100000000060000000000087198_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.90"';
+		
+		channels[128]='ChannelID="00000002000000050000000000413846",ChannelName="直播室14-2.5M",UserChannelID="444",ChannelURL="igmp://239.45.1.249:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226192/00000100000000060000000000087276_2.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226192/00000100000000060000000000087276_2.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.90"';
+		
+		channels[129]='ChannelID="00000001000000050000000000123234",ChannelName="直播室13-2.5M",UserChannelID="989",ChannelURL="igmp://239.45.1.248:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226198/00000100000000060000000000088056_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226198/00000100000000060000000000088056_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.90"';
+		
+		channels[130]='ChannelID="00000000000000010020160526000008",ChannelName="芒果直播频道8",UserChannelID="708",ChannelURL="igmp://239.45.3.130:5140",TimeShift="0",ChannelSDP="null",TimeShiftURL="null",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1"';
+		
+		channels[131]='ChannelID="00000000000000010020160526000009",ChannelName="芒果直播频道9",UserChannelID="709",ChannelURL="igmp://239.45.3.98:5140",TimeShift="0",ChannelSDP="null",TimeShiftURL="null",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1"';
+		
+		channels[132]='ChannelID="00000000000000010020160523000001",ChannelName="家家购物",UserChannelID="37",ChannelURL="igmp://239.45.3.79:5140",TimeShift="0",ChannelSDP="null",TimeShiftURL="null",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1"';
+		
+		channels[133]='ChannelID="00000001000000050000000000123231",ChannelName="直播室10-2.5M ",UserChannelID="986",ChannelURL="igmp://239.45.1.245:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226188/00000100000000060000000000087273_2.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226188/00000100000000060000000000087273_2.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.90"';
+		
+		channels[134]='ChannelID="00000001000000050000000000911992",ChannelName="山东卫视HD",UserChannelID="148",ChannelURL="igmp://239.45.3.238:5140",TimeShift="0",ChannelSDP="null",TimeShiftURL="null",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.89"';
+		
+		channels[135]='ChannelID="00000004000000050000000000000182",ChannelName="幸福彩HD",UserChannelID="95",ChannelURL="igmp://239.45.3.133:5140",TimeShift="0",ChannelSDP="null",TimeShiftURL="null",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1"';
+		
+		channels[136]='ChannelID="00000002000000050000000000641453",ChannelName="健康社区",UserChannelID="903",ChannelURL="igmp://239.45.3.214:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226213/10000100000000060000000000379501_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226213/10000100000000060000000000379501_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.90"';
+		
+		channels[137]='ChannelID="00000002000000050000000001557119",ChannelName="时尚购物",UserChannelID="69",ChannelURL="igmp://239.45.3.77:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226273/10000100000000060000000001533614_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226273/10000100000000060000000001533614_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1"';
+		
+		channels[138]='ChannelID="00000002000000050000000000411398",ChannelName="CCTV-7-2.5M",UserChannelID="57",ChannelURL="igmp://239.45.1.193:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226155/00000100000000060000000000087195_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226155/00000100000000060000000000087195_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.90"';
+		
+		channels[139]='ChannelID="00000002000000050000000000411456",ChannelName="湖北卫视-2.5M",UserChannelID="227",ChannelURL="igmp://239.45.1.239:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226142/00000100000000060000000000087174_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226142/00000100000000060000000000087174_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.89"';
+		
+		channels[140]='ChannelID="00000002000000050000000000413848",ChannelName="Knews24-2.5M",UserChannelID="446",ChannelURL="igmp://239.45.1.251:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226183/00000100000000060000000000087278_2.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226183/00000100000000060000000000087278_2.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.90"';
+		
+		channels[141]='ChannelID="00000001000000050000000000001314",ChannelName="第一财经-2.5M",UserChannelID="916",ChannelURL="igmp://239.45.3.111:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226108/00000100000000060000000000022373_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226108/00000100000000060000000000022373_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.90"';
+		
+		channels[142]='ChannelID="00000001000000050000000000002706",ChannelName="港剧风云",UserChannelID="414",ChannelURL="igmp://239.45.3.91:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/0/3221225533/00000000014i.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/0/3221225533/00000000014i.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.90"';
+		
+		channels[143]='ChannelID="00000001000000050000000000001370",ChannelName="动漫秀场",UserChannelID="317",ChannelURL="igmp://239.45.3.57:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/0/3221225484/00000000010z.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/0/3221225484/00000000010z.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.90"';
+		
+		channels[144]='ChannelID="00000001000000050000000000001377",ChannelName="游戏风云",UserChannelID="19",ChannelURL="igmp://239.45.3.64:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/0/3221225478/00000000010t.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/0/3221225478/00000000010t.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.89"';
+		
+		channels[145]='ChannelID="00000002000000050000000000411454",ChannelName="河北卫视-2.5M",UserChannelID="225",ChannelURL="igmp://239.45.1.237:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226140/00000100000000060000000000087172_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226140/00000100000000060000000000087172_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.89"';
+		
+		channels[146]='ChannelID="00000001000000050000000000123236",ChannelName="直播室15-2.5M",UserChannelID="991",ChannelURL="igmp://239.45.1.250:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226194/00000100000000060000000000087277_2.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226194/00000100000000060000000000087277_2.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.90"';
+		
+		channels[147]='ChannelID="00000001000000050000000001168794",ChannelName="央广购物",UserChannelID="66",ChannelURL="igmp://239.45.3.213:5140",TimeShift="0",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226228/10000100000000060000000000646845_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226228/10000100000000060000000000646845_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1"';
+		
+		channels[148]='ChannelID="00000001000000050000000000126389",ChannelName="兵团卫视",UserChannelID="233",ChannelURL="igmp://239.45.3.143:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226189/00000100000000060000000000152297_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226189/00000100000000060000000000152297_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.89"';
+		
+		channels[149]='ChannelID="00000001000000050000000000001365",ChannelName="金色频道",UserChannelID="310",ChannelURL="igmp://239.45.3.51:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/0/3221225496/00000000011b.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/0/3221225496/00000000011b.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.90"';
+		
+		channels[150]='ChannelID="0000000100000005000000000000999",ChannelName="百兆畅享乐视",UserChannelID="608",ChannelURL="http://222.68.210.15:8088/cycle/index.jsp",TimeShift="0",ChannelSDP="null",TimeShiftURL="null",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="2",ChannelPurchased="1"';
+		
+		channels[151]='ChannelID="0000000100000005000000000004",ChannelName="炫动���通-2.5M",UserChannelID="923",ChannelURL="igmp://239.45.3.187:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226077/00000100000000060000000000000293_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226077/00000100000000060000000000000293_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.90"';
+		
+		channels[152]='ChannelID="00000001000000050000000000002693",ChannelName="标清多画面",UserChannelID="281",ChannelURL="igmp://239.45.3.123:5140",TimeShift="0",ChannelSDP="null",TimeShiftURL="null",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.89"';
+		
+		channels[153]='ChannelID="00000001000000050000000000002701",ChannelName="电竞天堂",UserChannelID="406",ChannelURL="igmp://239.45.3.86:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/0/3221225562/00000000015w.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/0/3221225562/00000000015w.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.90"';
+		
+		channels[154]='ChannelID="00000002000000050000000000411419",ChannelName="劲爆体育-2.5M",UserChannelID="306",ChannelURL="igmp://239.45.3.67:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226148/00000100000000060000000000087180_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226148/00000100000000060000000000087180_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.89"';
+		
+		channels[155]='ChannelID="00000002000000050000000000411414",ChannelName="CCTV-音乐-2.5M",UserChannelID="65",ChannelURL="igmp://239.45.1.200:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226170/00000100000000060000000000087202_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226170/00000100000000060000000000087202_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.90"';
+		
+		channels[156]='ChannelID="00000001000000050000000001346060",ChannelName="新闻综合HD",UserChannelID="107",ChannelURL="igmp://239.45.3.209:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226233/10000100000000060000000000813435_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226233/10000100000000060000000000813435_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.89"';
+		
+		channels[157]='ChannelID="00000001000000050000000001555895",ChannelName="快乐宠物-2.5M",UserChannelID="299",ChannelURL="igmp://239.45.3.206:5140",TimeShift="0",ChannelSDP="null",TimeShiftURL="null",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1"';
+		
+		channels[158]='ChannelID="00000001000000050000000000001605",ChannelName="理财",UserChannelID="433",ChannelURL="igmp://239.45.3.105:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/0/3221225544/000000000152.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/0/3221225544/000000000152.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.90"';
+		
+		channels[159]='ChannelID="00000000000000010020160526000003",ChannelName="芒果直播频道3",UserChannelID="703",ChannelURL="igmp://239.45.3.7:5140",TimeShift="0",ChannelSDP="null",TimeShiftURL="null",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1"';
+		
+		channels[160]='ChannelID="00000002000000050000000000413847",ChannelName="直播室15-2.5M",UserChannelID="445",ChannelURL="igmp://239.45.1.250:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226194/00000100000000060000000000087277_2.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226194/00000100000000060000000000087277_2.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.90"';
+		
+		channels[161]='ChannelID="00000002000000050000000000411455",ChannelName="内蒙古卫视-2.5M",UserChannelID="226",ChannelURL="igmp://239.45.1.238:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226135/00000100000000060000000000087173_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226135/00000100000000060000000000087173_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.89"';
+		
+		channels[162]='ChannelID="00000001000000050000000000085296",ChannelName="D东方购物",UserChannelID="360",ChannelURL="igmp://239.45.3.7:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/0/3221225638/000000001dcq.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/0/3221225638/000000001dcq.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.90"';
+		
+		channels[163]='ChannelID="00000002000000050000000001456999",ChannelName="技能文化培训",UserChannelID="501",ChannelURL="http://222.68.210.42:8090/iptv_exp_act/jcwg.jsp",TimeShift="0",ChannelSDP="null",TimeShiftURL="null",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="2",ChannelPurchased="1"';
+		
+		channels[164]='ChannelID="00000002000000050000000000348917",ChannelName="第一财经",UserChannelID="7",ChannelURL="igmp://239.45.3.111:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226108/00000100000000060000000000022373_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226108/00000100000000060000000000022373_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.90"';
+		
+		channels[165]='ChannelID="00000001000000050000000000990915",ChannelName="电视剧频道HD",UserChannelID="105",ChannelURL="igmp://239.45.3.237:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226220/10000100000000060000000000522062_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226220/10000100000000060000000000522062_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.89"';
+		
+		channels[166]='ChannelID="00000002000000050000000000411439",ChannelName="安徽卫视-2.5M",UserChannelID="211",ChannelURL="igmp://239.45.1.223:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226126/00000100000000060000000000087158_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226126/00000100000000060000000000087158_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.89"';
+		
+		channels[167]='ChannelID="00000001000000050000000000001380",ChannelName="劲爆体育-2.5M",UserChannelID="944",ChannelURL="igmp://239.45.3.67:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226148/00000100000000060000000000087180_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226148/00000100000000060000000000087180_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.90"';
+		
+		channels[168]='ChannelID="00000002000000050000000000242155",ChannelName="信息",UserChannelID="988",ChannelURL="igmp://239.45.3.182:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/0/3221225698/iptv213084.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/0/3221225698/iptv213084.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.90"';
+		
+		channels[169]='ChannelID="00000001000000050000000000123226",ChannelName="直播室5",UserChannelID="185",ChannelURL="igmp://239.45.3.140:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226195/00000100000000060000000000201576_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226195/00000100000000060000000000201576_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.89"';
+		
+		channels[170]='ChannelID="00000002000000050000000000460807",ChannelName="东方购物-2",UserChannelID="13",ChannelURL="igmp://239.45.1.254:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226202/0000010000000006000000000614_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226202/0000010000000006000000000614_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.89"';
+		
+		channels[171]='ChannelID="00000002000000050000000000413839",ChannelName="直播室9-2.5M",UserChannelID="439",ChannelURL="igmp://239.45.1.244:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226185/00000100000000060000000000087272_1.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226185/00000100000000060000000000087272_1.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.90"';
+		
+		channels[172]='ChannelID="00000002000000050000000000348907",ChannelName="CCTV-6",UserChannelID="56",ChannelURL="igmp://239.45.3.115:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226106/00000100000000060000000000022371_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226106/00000100000000060000000000022371_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.90"';
+		
+		channels[173]='ChannelID="00000002000000050000000000411453",ChannelName="黑龙江卫视-2.5M",UserChannelID="224",ChannelURL="igmp://239.45.1.236:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226133/00000100000000060000000000087171_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226133/00000100000000060000000000087171_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.89"';
+		
+		channels[174]='ChannelID="00000001000000050000000000022034",ChannelName="新视觉体育",UserChannelID="102",ChannelURL="igmp://239.45.3.56:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226104/00000100000000060000000000010162_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226104/00000100000000060000000000010162_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.89"';
+		
+		channels[175]='ChannelID="00000002000000050000000000411446",ChannelName="山西卫视-2.5M",UserChannelID="217",ChannelURL="igmp://239.45.1.229:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226132/00000100000000060000000000087164_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226132/00000100000000060000000000087164_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.89"';
+		
+		channels[176]='ChannelID="00000002000000050000000000411450",ChannelName="云南卫视-2.5M",UserChannelID="221",ChannelURL="igmp://239.45.1.233:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226136/00000100000000060000000000087168_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226136/00000100000000060000000000087168_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.89"';
+		
+		channels[177]='ChannelID="00000001000000050000000000111131",ChannelName="东方卫视高清",UserChannelID="101",ChannelURL="igmp://239.45.3.146:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226112/00000100000000060000000000037556_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226112/00000100000000060000000000037556_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.89"';
+		
+		channels[178]='ChannelID="00000002000000050000000000411434",ChannelName="旅游卫视-2.5M",UserChannelID="206",ChannelURL="igmp://239.45.1.218:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226149/00000100000000060000000000087189_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226149/00000100000000060000000000087189_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.89"';
+		
+		channels[179]='ChannelID="00000002000000050000000000116884",ChannelName="互动社区",UserChannelID="521",ChannelURL="http://222.68.210.49:8088/hdtv/index.jsp",TimeShift="0",ChannelSDP="null",TimeShiftURL="null",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="2",ChannelPurchased="1"';
+		
+		channels[180]='ChannelID="00000001000000050000000000123223",ChannelName="直播室2",UserChannelID="182",ChannelURL="igmp://239.45.3.137:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226206/00000100000000060000000000201569_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226206/00000100000000060000000000201569_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.89"';
+		
+		channels[181]='ChannelID="00000001000000050000000000001379",ChannelName="魅力音乐",UserChannelID="309",ChannelURL="igmp://239.45.3.66:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/0/3221225510/00000000011p.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/0/3221225510/00000000011p.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.89"';
+		
+		channels[182]='ChannelID="00000002000000050000000000116888",ChannelName="第一艺文财金",UserChannelID="588",ChannelURL="http://222.68.210.47:9090/huangye/diyicaijing3/index.jsp",TimeShift="0",ChannelSDP="null",TimeShiftURL="null",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="2",ChannelPurchased="1"';
+		
+		channels[183]='ChannelID="00000002000000050000000001673354",ChannelName="直播室211",UserChannelID="450",ChannelURL="igmp://239.45.3.217:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226297/10000100000000060000000001678644_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226297/10000100000000060000000001678644_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1"';
+		
+		channels[184]='ChannelID="00000000000000010020160526000002",ChannelName="芒果直播���道2",UserChannelID="702",ChannelURL="igmp://239.45.3.6:5140",TimeShift="0",ChannelSDP="null",TimeShiftURL="null",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1"';
+		
+		channels[185]='ChannelID="00000001000000050000000000181358",ChannelName="湖南卫视HD",UserChannelID="143",ChannelURL="igmp://239.45.3.228:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226086/00000100000000060000000000005881_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226086/00000100000000060000000000005881_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.89"';
+		
+		channels[186]='ChannelID="00000001000000050000000000002690",ChannelName="喜剧影院",UserChannelID="409",ChannelURL="igmp://239.45.3.73:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/0/3221225483/00000000010y.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/0/3221225483/00000000010y.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.90"';
+		
+		channels[187]='ChannelID="00000001000000050000000000111130",ChannelName="浙江卫视(高清)",UserChannelID="141",ChannelURL="igmp://239.45.3.178:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226111/00000100000000060000000000037315_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226111/00000100000000060000000000037315_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.89"';
+		
+		channels[188]='ChannelID="00000000000000010000000002015508",ChannelName="信息频道",UserChannelID="933",ChannelURL="http://222.68.210.15:8088/info/index.jsp",TimeShift="0",ChannelSDP="null",TimeShiftURL="null",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="2",ChannelPurchased="1"';
+		
+		channels[189]='ChannelID="00000002000000050000000000411437",ChannelName="山东卫视-2.5M",UserChannelID="209",ChannelURL="igmp://239.45.1.221:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226160/00000100000000060000000000087192_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226160/00000100000000060000000000087192_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.89"';
+		
+		channels[190]='ChannelID="00000002000000050000000000411432",ChannelName="江苏卫视-2.5M",UserChannelID="204",ChannelURL="igmp://239.45.1.216:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226147/00000100000000060000000000087187_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226147/00000100000000060000000000087187_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.89"';
+		
+		channels[191]='ChannelID="00000001000000050000000002197673",ChannelName="直播室110",UserChannelID="191",ChannelURL="igmp://239.45.3.55:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226294/10000100000000060000000001678744_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226294/10000100000000060000000001678744_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1"';
+		
+		channels[192]='ChannelID="00000002000000050000000000339580",ChannelName="艺术人文-2.5M",UserChannelID="4",ChannelURL="igmp://239.45.3.244:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226092/00000100000000060000000000007691_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226092/00000100000000060000000000007691_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.90"';
+		
+		channels[193]='ChannelID="00000000000000010020160526000004",ChannelName="芒果直播频道4",UserChannelID="704",ChannelURL="igmp://239.45.3.121:5140",TimeShift="0",ChannelSDP="null",TimeShiftURL="null",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1"';
+		
+		channels[194]='ChannelID="00000001000000050000000002197672",ChannelName="直播室109",UserChannelID="190",ChannelURL="igmp://239.45.3.54:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226292/10000100000000060000000001678743_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226292/10000100000000060000000001678743_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1"';
+		
+		channels[195]='ChannelID="00000001000000050000000000123228",ChannelName="NBA直播室7HD",UserChannelID="187",ChannelURL="igmp://239.45.3.216:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226225/10000100000000060000000000686926_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226225/10000100000000060000000000686926_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1"';
+		
+		channels[196]='ChannelID="00000002000000050000000000348897",ChannelName="CCTV-5",UserChannelID="55",ChannelURL="igmp://239.45.3.114:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226105/00000100000000060000000000022370_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226105/00000100000000060000000000022370_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.90"';
+		
+		channels[197]='ChannelID="00000001000000050000000000002707",ChannelName="点掌财经",UserChannelID="300",ChannelURL="igmp://239.45.1.202:5140",TimeShift="0",ChannelSDP="null",TimeShiftURL="null",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.90"';
+		
+		channels[198]='ChannelID="00000001000000050000000001367707",ChannelName="魅力音乐HD",UserChannelID="99",ChannelURL="igmp://239.45.3.195:5140",TimeShift="0",ChannelSDP="null",TimeShiftURL="null",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1"';
+		
+		channels[199]='ChannelID="00000001000000050000000000002710",ChannelName="热门动画",UserChannelID="419",ChannelURL="igmp://239.45.3.96:5140",TimeShift="0",ChannelSDP="null",TimeShiftURL="null",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.90"';
+		
+		channels[200]='ChannelID="00000002000000050000000000805263",ChannelName="中国金融台",UserChannelID="234",ChannelURL="igmp://239.45.3.194:5140",TimeShift="0",ChannelSDP="null",TimeShiftURL="null",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.89"';
+		
+		channels[201]='ChannelID="00000001000000050000000000123229",ChannelName="Knews24HD",UserChannelID="188",ChannelURL="igmp://239.45.3.164:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/0/3221225670/0000000022is.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/0/3221225670/0000000022is.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.89"';
+		
+		channels[202]='ChannelID="00000002000000050000000000348887",ChannelName="CCTV-3",UserChannelID="53",ChannelURL="igmp://239.45.3.113:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226109/00000100000000060000000000022679_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226109/00000100000000060000000000022679_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.90"';
+		
+		channels[203]='ChannelID="00000002000000050000000000411444",ChannelName="吉林卫视-2.5M",UserChannelID="216",ChannelURL="igmp://239.45.1.228:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226125/00000100000000060000000000087163_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226125/00000100000000060000000000087163_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.89"';
+		
+		channels[204]='ChannelID="00000001000000050000000000911989",ChannelName="湖北卫视HD",UserChannelID="149",ChannelURL="igmp://239.45.3.239:5140",TimeShift="0",ChannelSDP="null",TimeShiftURL="null",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.89"';
+		
+		channels[205]='ChannelID="00000001000000050000000000181356",ChannelName="黑龙江卫视HD",UserChannelID="147",ChannelURL="igmp://239.45.3.232:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226085/00000100000000060000000000005880_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226085/00000100000000060000000000005880_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.89"';
+		
+		channels[206]='ChannelID="00000001000000050000000001394468",ChannelName="环球购物",UserChannelID="31",ChannelURL="igmp://239.45.3.123:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226237/10000100000000060000000000838200_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226237/10000100000000060000000000838200_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.89"';
+		
+		channels[207]='ChannelID="00000001000000050000000000123224",ChannelName="直播室3",UserChannelID="183",ChannelURL="igmp://239.45.3.138:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226208/00000100000000060000000000201575_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226208/00000100000000060000000000201575_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.89"';
+		
+		channels[208]='ChannelID="00000002000000050000000000411394",ChannelName="法治天地-2.5M",UserChannelID="18",ChannelURL="igmp://239.45.1.192:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226162/00000100000000060000000000087194_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226162/00000100000000060000000000087194_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.89"';
+		
+		channels[209]='ChannelID="00000002000000050000000000413843",ChannelName="直播室11-2.5M",UserChannelID="441",ChannelURL="igmp://239.45.1.246:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226181/00000100000000060000000000087274_2.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226181/00000100000000060000000000087274_2.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.90"';
+		
+		channels[210]='ChannelID="00000001000000050000000000181362",ChannelName="深圳卫视HD",UserChannelID="146",ChannelURL="igmp://239.45.3.231:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226084/00000100000000060000000000005879_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226084/00000100000000060000000000005879_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.89"';
+		
+		channels[211]='ChannelID="00000000000000010020160526000006",ChannelName="芒果直播频道6",UserChannelID="706",ChannelURL="igmp://239.45.3.128:5140",TimeShift="0",ChannelSDP="null",TimeShiftURL="null",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1"';
+		
+		channels[212]='ChannelID="00000002000000050000000000411438",ChannelName="辽宁卫视-2.5M",UserChannelID="210",ChannelURL="igmp://239.45.1.222:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226153/00000100000000060000000000087193_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226153/00000100000000060000000000087193_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.89"';
+		
+		channels[213]='ChannelID="00000002000000050000000000411435",ChannelName="广西卫视-2.5M",UserChannelID="207",ChannelURL="igmp://239.45.1.219:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226158/00000100000000060000000000087190_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226158/00000100000000060000000000087190_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.89"';
+		
+		channels[214]='ChannelID="00000002000000050000000001673352",ChannelName="直播室209",UserChannelID="448",ChannelURL="igmp://239.45.3.255:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226290/10000100000000060000000001678643_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226290/10000100000000060000000001678643_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1"';
+		
+		channels[215]='ChannelID="00000002000000050000000000411429",ChannelName="宁夏卫视-2.5M",UserChannelID="201",ChannelURL="igmp://239.45.1.213:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226152/00000100000000060000000000087184_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226152/00000100000000060000000000087184_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.89"';
+		
+		channels[216]='ChannelID="00000001000000050000000000001603",ChannelName="红色经典",UserChannelID="404",ChannelURL="igmp://239.45.3.104:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/0/3221225546/000000000154.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/0/3221225546/000000000154.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.90"';
+		
+		channels[217]='ChannelID="00000002000000050000000000411423",ChannelName="全纪实-2.5M",UserChannelID="308",ChannelURL="igmp://239.45.1.207:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226141/00000100000000060000000000087181_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226141/00000100000000060000000000087181_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.89"';
+		
+		channels[218]='ChannelID="00000002000000050000000000411457",ChannelName="重庆卫视-2.5M",UserChannelID="228",ChannelURL="igmp://239.45.1.240:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226137/00000100000000060000000000087175_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226137/00000100000000060000000000087175_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.89"';
+		
+		channels[219]='ChannelID="00000000000000010020160526000005",ChannelName="芒果直播频道5",UserChannelID="705",ChannelURL="igmp://239.45.3.127:5140",TimeShift="0",ChannelSDP="null",TimeShiftURL="null",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1"';
+		
+		channels[220]='ChannelID="00000001000000050000000000008860",ChannelName="演唱会",UserChannelID="426",ChannelURL="igmp://239.45.3.100:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/0/3221225542/00000000014v.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/0/3221225542/00000000014v.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.90"';
+		
+		channels[221]='ChannelID="00000002000000050000000000411403",ChannelName="CCTV-新闻-2.5M",UserChannelID="63",ChannelURL="igmp://239.45.1.198:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226168/00000100000000060000000000087200_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226168/00000100000000060000000000087200_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.90"';
+		
+		channels[222]='ChannelID="00000001000000050000000000160782",ChannelName="宁夏卫视-2.5M",UserChannelID="952",ChannelURL="igmp://239.45.1.213:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226152/00000100000000060000000000087184_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226152/00000100000000060000000000087184_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.90"';
+		
+		channels[223]='ChannelID="00000002000000050000000000411430",ChannelName="北京卫视-2.5M",UserChannelID="202",ChannelURL="igmp://239.45.1.214:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226145/00000100000000060000000000087185_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226145/00000100000000060000000000087185_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.89"';
+		
+		channels[224]='ChannelID="00000001000000050000000002197674",ChannelName="直播室111",UserChannelID="192",ChannelURL="igmp://239.45.3.88:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226289/10000100000000060000000001678455_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226289/10000100000000060000000001678455_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1"';
+		
+		channels[225]='ChannelID="00000001000000050000000001555906",ChannelName="女性时尚",UserChannelID="292",ChannelURL="igmp://239.45.3.198:5140",TimeShift="0",ChannelSDP="null",TimeShiftURL="null",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1"';
+		
+		channels[226]='ChannelID="00000002000000050000000000331687",ChannelName="CCTV-4",UserChannelID="54",ChannelURL="igmp://239.45.3.190:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226082/00000100000000060000000000000558_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226082/00000100000000060000000000000558_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.90"';
+		
+		channels[227]='ChannelID="00000001000000050000000001394461",ChannelName="东方购物3",UserChannelID="21",ChannelURL="igmp://239.45.3.124:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226240/10000100000000060000000000848366_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226240/10000100000000060000000000848366_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.90"';
+		
+		channels[228]='ChannelID="00000002000000050000000000331680",ChannelName="炫动卡通-2.5M",UserChannelID="14",ChannelURL="igmp://239.45.3.187:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226077/00000100000000060000000000000293_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226077/00000100000000060000000000000293_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.89"';
+		
+		channels[229]='ChannelID="00000001000000050000000000001601",ChannelName="赛事精选-1",UserChannelID="401",ChannelURL="igmp://239.45.3.83:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/0/3221225579/00000000016l.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/0/3221225579/00000000016l.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.90"';
+		
+		channels[230]='ChannelID="00000001000000050000000000002687",ChannelName="导视",UserChannelID="199",ChannelURL="igmp://239.45.3.70:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/0/3221225557/00000000015i.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/0/3221225557/00000000015i.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.89"';
+		
+		channels[231]='ChannelID="00000002000000050000000001673351",ChannelName="直播室208",UserChannelID="447",ChannelURL="igmp://239.45.3.90:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226295/10000100000000060000000001678642_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226295/10000100000000060000000001678642_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1"';
+		
+		channels[232]='ChannelID="00000002000000050000000000413844",ChannelName="直播���12-2.5M",UserChannelID="442",ChannelURL="igmp://239.45.1.247:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226196/00000100000000060000000000087275_3.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226196/00000100000000060000000000087275_3.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.90"';
+		
+		channels[233]='ChannelID="00000002000000050000000000331683",ChannelName="CCTV-1-2.5M",UserChannelID="51",ChannelURL="igmp://239.45.3.188:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226079/00000100000000060000000000000305_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226079/00000100000000060000000000000305_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.90"';
+		
+		channels[234]='ChannelID="00000002000000050000000000411415",ChannelName="都市剧场-2.5M",UserChannelID="301",ChannelURL="igmp://239.45.1.201:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226163/00000100000000060000000000087203_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226163/00000100000000060000000000087203_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.89"';
+		
+		channels[235]='ChannelID="00000002000000050000000000339594",ChannelName="星尚-2.5M",UserChannelID="6",ChannelURL="igmp://239.45.3.246:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226094/00000100000000060000000000007693_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226094/00000100000000060000000000007693_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.90"';
+		
+		channels[236]='ChannelID="00000001000000050000000001161091",ChannelName="五星体育HD",UserChannelID="108",ChannelURL="igmp://239.45.3.210:5140",TimeShift="1",ChannelSDP="rtsp://124.75.34.37/PLTV/88888888/224/3221226234/10000100000000060000000000813434_0.smil",TimeShiftURL="rtsp://124.75.34.37/PLTV/88888888/224/3221226234/10000100000000060000000000813434_0.smil",ChannelLogoStruct="",ChannelLogoURL="null",PositionX="0",PositionY="0",BeginTime="0",Interval="0",Lasting="0",ChannelType="1",ChannelPurchased="1",ChannelFCCPort="8027",ChannelFCCIP="101.95.76.89"';
+
+	    serviceEntrys[0]='URL="http://124.75.34.111:28082/EDS/jsp/ShotCutProcess.jsp?ACTION=4",HotKey="276",Desc="点播"';
+
+	    serviceEntrys[1]='URL="http://222.68.210.15:8088/info/index.jsp",HotKey="278",Desc="信息"';
+
+	    serviceEntrys[2]='URL="http://124.75.34.111:28082/EDS/jsp/ShotCutProcess.jsp?ACTION=2",HotKey="275",Desc="频道"';
+
+	    serviceEntrys[3]='URL="http://124.75.34.111:28082/EDS/jsp/ShotCutProcess.jsp?ACTION=1",HotKey="274",Desc="首页"';
+
+	    serviceEntrys[4]='URL="http://124.75.34.111:28082/EDS/jsp/ShotCutProcess.jsp?ACTION=3",HotKey="277",Desc="回看"';
+
+var EPGDomain='http://124.75.34.111:28082/EDS/jsp/index.jsp';
+var UserToken = '00000000@etv1***47e000d0000abe6e';
+var UserID = '00000000@etv1';
+var UserGroup = '8888';
+var EpgGroupNMB = '1016';
+var dynamicAuthIp='124.75.29.89';
+var stbid = '000200202016052020101847';
+var Mode = 'MENU.SMG';
+
+function setEpgConfig() {
+	Authentication.CTCSetConfig("UserToken", UserToken);
+	Authentication.CTCSetConfig("EpgGroupNMB", EpgGroupNMB);
+	Authentication.CTCSetConfig("Mode", Mode);
+	
+				Authentication.CTCSetConfig("TvmsResService", "http://12.224.255.3:8080/MsgStbapi/download.action");
+				
+				Authentication.CTCSetConfig("EPGDomain", "http://124.75.34.111:28082/EDS/jsp/index.jsp");
+				
+				Authentication.CTCSetConfig("TvmsVerifyCode", "1234567890ABCDEF");
+				
+				Authentication.CTCSetConfig("NTPDomain", "124.75.34.60");
+				
+				Authentication.CTCSetConfig("ScreenService", "http://124.75.17.140:8080/screenadminportal/admin/queryService.action");
+				
+				Authentication.CTCSetConfig("NTPDomainBackup", "124.75.34.40");
+				
+				Authentication.CTCSetConfig("TvmsResInterval", "60");
+				
+}
+function ConfigChannel(){  	
+	Authentication.CTCSetConfig("ChannelCount",""+channels.length);
+	for(var i=0;i<channels.length;i++){
+	   Authentication.CTCSetConfig("Channel",channels[i]);
+	}
+}
+function setServiceEntry(){
+	for(var i=0;i<serviceEntrys.length;i++){
+	   Authentication.CTCSetConfig("ServiceEntry",serviceEntrys[i]);
+	}
+}
+
+function afterAuthEpg()
+{
+	setEpgConfig();
+	ConfigChannel();
+	setServiceEntry();
+	
+	Authentication.CTCSetConfig("LoginStatus",'ON');
+
+			
+			Authentication.CTCSetConfig("ADPushDomain","http://124.75.29.174:8088/Behavior/query/queryRecommends");
+	
+	
+	document.IptvAuthenticationForm.AudioADOn.value = audioADOn;
+	document.IptvAuthenticationForm.submit();
+	
+}
+
+function adDelay(){
+	
+				var BoxPlatform = navigator.platform;
+				var BoxBrowser = navigator.appName;
+				var BoxAgent=navigator.userAgent;
+				var result=BoxPlatform+';'+BoxBrowser+';'+BoxAgent;
+				
+				var whiteList = "EC5108;TAKIN;EC5108|webkit|13|Hybroad|2.2.1,iPanel;DEC5108;TAKIN;EC5108|webkit|13|Hybroad|2.2.1,iPanel;DS4900|vane|2|iPanel3.0,iPanel;EC5108|Webkit|13|Hybroad|2.2.1,DS4904;EIS iPanel;iPanel 3.0".split(",");
+				var blackList = "AudioBlackStbtype".split(",");
+					
+				var bmark  = checkInList(result,blackList);
+				//不在黑名单中
+				if(bmark == -1){
+					var wmark = checkInList(result,whiteList);
+					//在白名单中
+					if(wmark == 0){
+						audioADOn = "yes";
+						playAudio("http://124.75.29.172:7001/images/hd/etv_hd_booting_1.mp3");
+					}
+				}
+			
+			setTimeout("afterAuthEpg()",5000); 
+}
+
+function initBody(){
+		adDelay();
+}
+</script>
+	</head>
+	<body background="http://124.75.29.172:7001/images/hd/etv_hd_booting_1.jpg?loginName=00000000@etv1&ip=21.172.70.12   " onload="javascript:initBody()">
+		<form action="etvLogin3.do" name="IptvAuthenticationForm" method="post">
+		  <input type="hidden" name="UserToken" value="00000000@etv1***47e000d0000abe6e">
+          <input type="hidden" name="UserID" value="00000000@etv1">
+          <input type="hidden" name="loginName" value="00000000@etv1">
+          <input type="hidden" name="UserGroupNMB" value="8888">
+          <input type="hidden" name="DynamicAuthIP" value="124.75.29.89">
+          <input type="hidden" name="stbid" value="000200202016052020101847">
+          <input type="hidden" name="EPGGroupNMB" value="1016">
+          <input type="hidden" name="Mode" value="MENU.SMG">
+          <input type="hidden" name="AudioADOn" value="" >
+          <input type="hidden" name="AdBlackUser" value="no" >
+    
+    	<input type="hidden" name="EpgDomain" value="http://124.75.34.111:28082/EDS/jsp/index.jsp">
+    
+        </form>
+	</body>
+</html>
+
+0000
+
+HTTP/1.1 200 OK
+Date: Thu, 18 Aug 2016 11:45:52 GMT
+Accept-Ranges: bytes
+Content-Length: 1914
+Last-Modified: Wed, 06 Jan 2016 07:46:24 GMT
+X-Powered-By: Servlet/2.5 JSP/2.1
+
+function playAudio(effectMusicURL){
+    	
+	 var PlayerIntanceID;
+ 
+      mp = new MediaPlayer(); 
+      PlayerInstanceID = mp.getNativePlayerInstanceID();
+    	// Media Player的播放模式。
+// 0: 单媒体的播放模式 
+mp.setSingleOrPlaylistMode(0);
+
+// MediaPlayer对象对应的视频窗口的显示模式.
+// 255: 视频显示窗口将被关闭。
+// 它将在保持媒体流连接的前提下，隐藏视频窗口。如果流媒体播放没有被暂停，将继续播放音频。
+mp.setVideoDisplayMode(255);
+
+// 表示该播放器实例在生命周期内都是否允许任何TrickMode操作（包括快进/快退/暂停）
+// 1: 不允许TrickMode操作
+mp.setAllowTrickmodeFlag( 1 );
+/*
+        mp.setAllowTrickmodeFlag(0);
+        mp.setNativeUIFlag(0);      
+        mp.setChannelNoUIFlag(0);   
+        mp.setProgressBarUIFlag(0);
+        mp.setAudioVolumeUIFlag(0);
+        mp.setAudioTrackUIFlag(0);
+        mp.setMuteUIFlag(0);*/
+  //     var effectMusicURL = "http://222.66.209.181:8086/MusicMix/Mp3/test.mp3";
+	   
+	   
+	//    var effectMusicURL = "http://124.75.29.119:8080/boot1.mp3";
+var effectmediaStr = toJson( effectMusicURL );
+mp.setSingleMedia(effectmediaStr);
+ mp.playFromStart();
+    }
+	
+function toJson(url)
+{ 
+	return '[{mediaUrl:"'
+	+ url
+	+ '",mediaCode: "code1",'
+	+ 'mediaType:2,'
+	+ 'audioType:1,'
+	+ 'videoType:1,'
+	+ 'streamType:1,'
+	+ 'drmType:1,'
+	+ 'fingerPrint:0,'
+	+ 'copyProtection:1,'
+	+ 'allowTrickmode:1,'
+	+ 'startTime:0,'
+	+ 'endTime:0,'
+	+ 'entryID:"entry1"}]';	
+}
+
+	function destoryMP(){
+        //mp.leaveChannel();
+        mp.stop();
+        mp.releaseMediaPlayer(mp.getNativePlayerInstanceID());
+    }
+	
+	//检查是否在List中
+	function checkInList(item,list){
+		var cnt = -1;
+		for(var i in list){
+			if(item.indexOf(list[i])>=0){
+				cnt = cnt+1;	
+				break;
+			}
+		}
+		return cnt;
+	}HTTP/1.1 200 OK
+Date: Thu, 18 Aug 2016 11:45:59 GMT
+Content-Length: 1448
+Content-Type: text/html; charset=UTF-8
+X-Powered-By: Servlet/2.5 JSP/2.1
+
+
+
+
+
+
+ 
+ 
+
+
+
+<html>
+  <head>
+		<title>开机第三步92%</title>
+		<meta name="page-view-size" content="1280*720">
+		<script language="javascript" src='/iptv3a/scripts/audioplay.js'></script>
+		<script language="javascript">
+function doPost(){
+	 
+			document.IptvAuthenticationForm.action = "etvShowVideo.do";
+	
+			document.IptvAuthenticationForm.submit();
+	
+}		
+		
+function adDelay(){
+	
+   		setTimeout("doPost()",5000);
+   	
+}
+		
+function initBody(){
+	adDelay();
+}
+		</script>
+  </head>
+  
+  <body background="http://124.75.29.172:7001/images/hd/etv_hd_booting_2.jpg?loginName=00000000@etv1&ip=21.172.70.12   " onload="javascript:initBody()">
+		<form action="http://124.75.34.111:28082/EDS/jsp/index.jsp" name="IptvAuthenticationForm" method="post">
+		  <input type="hidden" name="UserToken" value="00000000@etv1***47e000d0000abe6e">
+          <input type="hidden" name="UserID" value="00000000@etv1">
+          <input type="hidden" name="UserGroupNMB" value="8888">
+          <input type="hidden" name="DynamicAuthIP" value="124.75.29.89">
+          <input type="hidden" name="stbid" value="000000000000000000000000">
+          <input type="hidden" name="EPGGroupNMB" value="1016">
+          <input type="hidden" name="Mode" value="MENU.SMG">
+          
+    
+    	<input type="hidden" name="EpgDomain" value="http://124.75.34.111:28082/EDS/jsp/index.jsp">
+    
+        </form>
+	</body>
+</html>
+HTTP/1.1 200 OK
+Date: Thu, 18 Aug 2016 11:46:04 GMT
+Content-Length: 1311
+Content-Type: text/html; charset=UTF-8
+X-Powered-By: Servlet/2.5 JSP/2.1
+
+
+
+
+
+
+
+
+
+<html>
+  <head>
+    <title>播放视频</title>
+    <meta name="page-view-size" content="1280*720">
+    <script language="javascript" src="http://124.75.29.172:7001/images/hd/hd_booting_3.js"></script>
+    <script language="javascript">
+function goback()
+{
+//alert('222');
+ document.IptvShowVideoForm.submit();
+}
+function delay(){
+
+	setTimeout("goback();", 18000);
+	init();
+}
+
+	  </script>
+  </head>
+  
+  <body background="http://124.75.29.172:7001/images/hd/hd_booting_3.png?loginName=00000000@etv1&ip=21.172.70.12   " style="background-Repeat:repeat;background-color:transparent" onLoad="delay();" onUnload="destoryMP();">
+    <form action="http://124.75.34.111:28082/EDS/jsp/index.jsp" name="IptvShowVideoForm" method="post">
+		  <input type="hidden" name="UserToken" value="00000000@etv1***47e000d0000abe6e">
+          <input type="hidden" name="UserID" value="00000000@etv1">
+          <input type="hidden" name="UserGroupNMB" value="8888">
+          <input type="hidden" name="DynamicAuthIP" value="124.75.29.89">
+          <input type="hidden" name="stbid" value="000000000000000000000000">
+          <input type="hidden" name="EPGGroupNMB" value="1016">
+          <input type="hidden" name="Mode" value="MENU.SMG">
+    
+        </form>
+  </body>
+</html>
