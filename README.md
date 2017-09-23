@@ -8,11 +8,13 @@ https://github.com/lucifersun/China-Telecom-ShangHai-IPTV-list/blob/master/IPTV.
 
 
 ------
-### Kodi播放
+### Kodi播放（PC版）
 
 Kodi启用“电视”功能`(系统-电视-常规-启用)`，客户端使用“PVR IPTV Simple Client”，选择对应的m3u8列表文件，即可在主页面的“电视”内进行直播。
 
 设置“后备帧率”为50Hz`(系统-电视-播放-后备帧率)`，可以播放所有频道。
+
+Android版Kodi无法播放。
 
 ### iPhone/iPad播放
 
