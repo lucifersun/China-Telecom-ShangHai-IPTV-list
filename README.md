@@ -4,7 +4,7 @@
 
 https://github.com/lucifersun/China-Telecom-ShangHai-IPTV-list/blob/master/IPTV.htm
 
-部分视频源在Windows上用PotPlayer无法播放（包含立体声音轨的视频源无法播放），Android平台上用MXPlayer可以正常播放。
+部分视频源在Windows上用PotPlayer无法直接播放的，请加上`?playseek=YYYYMMDDhhmmss现在时间-YYYYMMDDhhmmss未来时间`即可播放。By:yangjuniori
 
 
 ------
