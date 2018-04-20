@@ -1,7 +1,15 @@
 中国电信上海IPTV视频流地址列表
 =======
 
+###2018-4-20 添加IPTVplayseek.html 可以自动添加playseek字串，方便播放
 
+每次都要手工添加playseek，嫌麻烦，啃了些JS教程，写了这个页面。我的编程水平仅限于能给Excel写VBA，所以这个页面只能说大致能用，没做校验之类的设置，出错概率肯定很大，代码可读性也是一塌糊涂，大家多包涵。
+
+如果有人能帮忙做些优化，感激不尽。
+
+http://htmlpreview.github.com/?https://raw.githubusercontent.com/lucifersun/China-Telecom-ShangHai-IPTV-list/master/iptvplayseek.html
+
+------
 https://github.com/lucifersun/China-Telecom-ShangHai-IPTV-list/blob/master/IPTV.htm
 
 部分视频源在Windows上用PotPlayer无法直接播放的，请加上`?playseek=YYYYMMDDhhmmss现在时间-YYYYMMDDhhmmss未来时间`即可播放。By:yangjuniori
