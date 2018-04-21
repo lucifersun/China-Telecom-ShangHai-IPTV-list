@@ -14,7 +14,8 @@
 <h2>上海电信IPTV视频流地址</h2>
 <p>开始日期: <input type="date" id="start_user_date" />开始时间: <input type="time" id="start_user_time" /></p>
 <p>结束日期: <input type="date" id="end_user_date" />结束时间: <input type="time" id="end_user_time" /></p>
-<p><button type="button" onclick="reload()">reload</button></p>
+<p><button type="button" onclick="reload()">更新链接</button></p>
+<p><button type="button" onclick="timenow()">当前时间+4小时</button></p>
 <p id="demo"></p>
 <script>
 var iptvlist = '{"iptv":['+
@@ -139,6 +140,7 @@ var iptvlist = '{"iptv":['+
 '{"url":"rtsp://124.75.34.37/PLTV/88888888/224/3221226313/10000100000000060000000001865656_0.smil", "name":"东方购物-3HD"},'+
 '{"url":"rtsp://124.75.34.37/PLTV/88888888/224/3221226308/10000100000000060000000001865657_0.smil", "name":"东方购物-4HD"},'+
 '{"url":"rtsp://124.75.34.37/PLTV/88888888/224/3221226315/10000100000000060000000001865658_0.smil", "name":"东方购物-5HD"}]}';
+timenow()
 reload()
 
 function reload()
@@ -156,6 +158,65 @@ function reload()
     {
         document.getElementById("demo").innerHTML = document.getElementById("demo").innerHTML +"<p><a href=\"" + obj.iptv[i].url + "?playseek=" + start_time + "-" + end_time + "\">" + obj.iptv[i].name + "</a></p>";
     }
+}
+
+function timenow()
+{
+    var nowtime =new Date();
+    var sdate,stime;
+    sdate=nowtime.getDate().toString();
+    if (sdate.length<2)
+    {
+        sdate="0"+sdate;
+    }
+    sdate=(nowtime.getMonth()+1).toString() + "-"+sdate;
+    if (sdate.length<5)
+    {
+        sdate="0"+sdate;
+    }
+    sdate=nowtime.getFullYear().toString() + "-" + sdate;
+    
+stime=nowtime.getMinutes().toString();
+    if (stime.length<2)
+    {
+        stime="0"+stime;
+    }
+    stime=nowtime.getHours().toString() + ":" + stime;
+    if (stime.length<5)
+    {
+        stime="0"+stime;
+    }
+
+document.getElementById("start_user_date").value=sdate;
+document.getElementById("start_user_time").value=stime;
+
+nowtime.setHours(nowtime.getHours()+4)
+sdate=nowtime.getDate().toString();
+    if (sdate.length<2)
+    {
+        sdate="0"+sdate;
+    }
+    sdate=(nowtime.getMonth()+1).toString() + "-"+sdate;
+    if (sdate.length<5)
+    {
+        sdate="0"+sdate;
+    }
+    sdate=nowtime.getFullYear().toString() + "-" + sdate;
+    
+ 
+    stime=nowtime.getMinutes().toString();
+    if (stime.length<2)
+    {
+        stime="0"+stime;
+    }
+    stime=nowtime.getHours().toString() + ":" + stime;
+    if (stime.length<5)
+    {
+        stime="0"+stime;
+    }
+
+document.getElementById("end_user_date").value=sdate;
+document.getElementById("end_user_time").value=stime;
 }
 </script>
 
