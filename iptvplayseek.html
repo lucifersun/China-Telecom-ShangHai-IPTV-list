@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="refresh" content="60">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>上海电信IPTV视频流地址</title>
 <link rel="icon" type="image/png" href="/ico/favicon-16x16.png" sizes="16x16" />
 <link rel="icon" type="image/png" href="/ico/favicon-32x32.png" sizes="32x32" />
@@ -10,12 +11,12 @@
 <link rel="icon" type="image/png" href="/ico/favicon-194x194.png" sizes="194x194" />
 <link rel="icon" type="image/png" href="/ico/android-chrome-192x192.png" sizes="192x192" />
 </head>
-<body>
+<body font: normal 100% Helvetica, Arial, sans-serif;>
 
 <h2>上海电信IPTV视频流地址</h2>
-<p>开始日期: <input type="date" id="begin_user_date" />开始时间: <input type="time" id="begin_user_time" /></p>
-<p>结束日期: <input type="date" id="end_user_date" />结束时间: <input type="time" id="end_user_time" /></p>
-<p><input type="checkbox" id="HDonly"/> 仅显示HD频道</p>
+<p>开始日期: <input type="date" id="begin_user_date" />  &emsp; 开始时间: <input type="time" id="begin_user_time" /></p>
+<p>结束日期: <input type="date" id="end_user_date" />  &emsp; 结束时间: <input type="time" id="end_user_time" /></p>
+<p><input type="checkbox" onclick="reload()" id="HDonly"/> 仅显示HD频道</p>
 <p><button type="button" onclick="reload()">更新链接</button>  &emsp; <button type="button" onclick="timenow(4),reload()">当前时间+4小时</button> &emsp;注：带palyseek</p>
 <p><button type="button" onclick="noplayseek()">生成纯链接</button> &emsp;注：不带palyseek</p>
 <p><button type="button" onclick="m3u()">生成M3U内容</button>  &emsp; <button type="button" onclick="txt()">生成txt内容</button></p>
