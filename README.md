@@ -43,7 +43,7 @@ Kodi启用“电视”功能`(系统-电视-常规-启用)`，客户端使用“
 
 Android版Kodi无法播放，建议利用网页列表选择频道+MXPlayer播放。
 
-http://htmlpreview.github.com/?https://raw.githubusercontent.com/lucifersun/China-Telecom-ShangHai-IPTV-list/master/IPTV.htm
+http://htmlpreview.github.com/?https://raw.githubusercontent.com/lucifersun/China-Telecom-ShangHai-IPTV-list/master/IPTV.html
 
 ### iPhone/iPad播放
 
