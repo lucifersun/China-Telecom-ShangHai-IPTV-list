@@ -25,7 +25,7 @@
 
 如果有人能帮忙做些优化，感激不尽。
 
-http://htmlpreview.github.com/?https://raw.githubusercontent.com/lucifersun/China-Telecom-ShangHai-IPTV-list/master/iptvplayseek.html
+http://htmlpreview.github.com/?https://raw.githubusercontent.com/lucifersun/China-Telecom-ShangHai-IPTV-list/master/IPTV.html
 
 ------
 https://github.com/lucifersun/China-Telecom-ShangHai-IPTV-list/blob/master/IPTV.html
